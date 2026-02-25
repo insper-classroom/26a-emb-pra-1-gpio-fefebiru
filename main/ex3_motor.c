@@ -46,8 +46,7 @@ int main() {
         gpio_put(LED_PIN, 1);
         sleep_ms(250);
 
-        gpio_put(LED_PIN, 0);
-        sleep_ms(250);
+
 
         for (int i=0; i<=512;i++){
             gpio_put(FASE_PIN_1, 1);
@@ -78,6 +77,8 @@ int main() {
         gpio_put(FASE_PIN_2, 0);
         gpio_put(FASE_PIN_3, 0);
         gpio_put(FASE_PIN_4, 0);
+        gpio_put(LED_PIN, 0);
+        sleep_ms(250);
         while (!gpio_get(BTN_PIN)) {
       };
       }
